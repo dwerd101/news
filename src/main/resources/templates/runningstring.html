@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Hello!</title>
@@ -33,7 +34,9 @@
 <!--body-->
 <div class="jumbotron text-center">
     <div class="container">
-        <h3 class="display-3">Hello, World☕</h3>
+        <!--Hello, World☕-->
+        <h3 class="display-3" th:text="${word}"></h3>
+        <h3 class="display-3" th:text="${person.name + ' '+ person.middleName}"></h3>
     </div>
 </div>
 <!--footer-->
