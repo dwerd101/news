@@ -4,7 +4,7 @@ package com.mynews.mapper.impl;
 import com.mynews.mapper.Mapper;
 import com.mynews.model.News;
 import com.mynews.model.NewsFields;
-import com.mynews.model.NewsJson;
+import com.mynews.model.dto.NewsDTO;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -13,10 +13,10 @@ import java.util.List;
 import java.util.Map;
 
 @Component
-public class MeduzaNewsMapperImpl implements Mapper<NewsJson, News> {
+public class MeduzaNewsMapperImpl implements Mapper<NewsDTO, News> {
 
     @Override
-    public News toDTO(NewsJson newsJson) {
+    public News toDTO(NewsDTO newsJson) {
         List<NewsFields> newsFieldsList = new ArrayList<>();
         for (Map.Entry<String,Map<String,Object>> maps : newsJson.getDocuments().entrySet()) {
             NewsFields newsFields = new NewsFields();
@@ -42,8 +42,4 @@ public class MeduzaNewsMapperImpl implements Mapper<NewsJson, News> {
        return new News(newsFieldsList);
     }
 
-    @Override
-    public NewsJson toModel(News news) {
-        return null;
-    }
 }

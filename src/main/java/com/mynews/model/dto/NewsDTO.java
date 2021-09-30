@@ -1,4 +1,4 @@
-package com.mynews.model;
+package com.mynews.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,7 +14,7 @@ import java.util.Map;
 @NoArgsConstructor
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class NewsJson {
+public class NewsDTO {
     @JsonProperty("documents")
     private Map<String, Map<String, Object>> documents;
 }
