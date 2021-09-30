@@ -1,3 +1,4 @@
+/*
 package com.mynews.controller;
 
 import com.mynews.model.Person;
@@ -38,3 +39,4 @@ public class MainController {
     }
 
 }
+*/

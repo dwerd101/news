@@ -1,4 +1,4 @@
-package com.mynews.model.weather.yandex;
+package com.mynews.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,16 +7,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.Map;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Data
-public class Weather {
-    @JsonProperty("forecasts")
-    private List<Forecast> forecast;
-    @JsonProperty("fact")
-    private Fact fact;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class NewsJson {
+    @JsonProperty("documents")
+    private Map<String, Map<String, Object>> documents;
 }

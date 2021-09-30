@@ -1,3 +1,4 @@
+/*
 package com.mynews.controller;
 
 import com.mynews.model.Person;
@@ -14,3 +15,4 @@ public class ExampleController {
         return Person.builder().name(name).lastName(lastname).build();
     }
 }
+*/

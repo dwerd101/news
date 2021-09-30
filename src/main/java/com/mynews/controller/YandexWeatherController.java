@@ -1,8 +1,12 @@
+/*
 package com.mynews.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mynews.model.Person2;
 import com.mynews.model.weather.yandex.Weather;
 
 import com.mynews.model.weather.yandex.timesofday.Day;
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,13 +29,5 @@ public class YandexWeatherController {
         return "weather";
     }
 
-    public static void main(String[] args) {
-        Day weather = new Day();
-        weather.setCondition("-");
-        weather.setTempMin(4L);
-        weather.setTempMax(26L);
-        weather.setFeelsLike(1L);
-        weather.setPrecProb(7L);
-       // weather.
-    }
 }
+*/
