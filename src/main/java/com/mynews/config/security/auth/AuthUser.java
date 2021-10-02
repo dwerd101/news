@@ -1,5 +1,6 @@
 package com.mynews.config.security.auth;
 
+import com.mynews.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -53,5 +54,16 @@ public class AuthUser implements UserDetails {
     @Override
     public boolean isEnabled() {
         return active;
+    }
+
+    public static UserDetails fromUser(User user) {
+        return new org.springframework.security.core.userdetails.User(
+                user.getLogin(), user.getPassword(),
+                user.getIsActive(),
+                true,
+                true,
+                user.getAccountNonLocked(),
+                user.getRole().getAuthorities()
+        );
     }
 }

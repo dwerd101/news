@@ -18,7 +18,7 @@ public class MainController {
 
         WebClient webClient = WebClient.create();
         News news = webClient.get()
-                .uri("http://localhost:8090/news")
+                .uri("http://localhost:8001/news")
                 .exchange()
                 .block()
                 .bodyToMono(News.class)
@@ -28,7 +28,7 @@ public class MainController {
     }
 
 
-    @GetMapping("/")
+    @GetMapping("/mynews")
     public String getPageHelloWorld() {
         return "redirect:/news/main";
     }
