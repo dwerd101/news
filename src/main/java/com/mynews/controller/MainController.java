@@ -3,6 +3,7 @@ package com.mynews.controller;
 
 import com.mynews.model.News;
 import com.mynews.model.dto.NewsDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,13 +13,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MainController {
+    @Value("${localhost.news}")
+    private String newsUri;
 
     @GetMapping("/news/main")
     public String getNews(ModelMap modelMap) {
-
         WebClient webClient = WebClient.create();
         News news = webClient.get()
-                .uri("http://localhost:8001/news")
+                .uri(newsUri)
                 .exchange()
                 .block()
                 .bodyToMono(News.class)
@@ -27,6 +29,10 @@ public class MainController {
         return "mainpage";
     }
 
+    @GetMapping("/")
+    public String redirect() {
+        return "redirect:/auth/login";
+    }
 
     @GetMapping("/mynews")
     public String getPageHelloWorld() {

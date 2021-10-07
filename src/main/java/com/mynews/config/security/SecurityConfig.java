@@ -26,36 +26,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/mynews").hasAnyAuthority("user:read", "admin:read")
-                .antMatchers("/news/main").hasAnyAuthority("user:read", "admin:read")
+                .antMatchers("/news/main/**").hasAnyAuthority("user:read", "admin:read")
                 .antMatchers("/news").permitAll()
                 .and()
-                .httpBasic()
-                .and()
-                .logout()
-               // .logoutUrl("/logout")
-                .clearAuthentication(true)
-                .invalidateHttpSession(true)
-                //.deleteCookies("sessionone","remember-me")
-                .logoutSuccessUrl("/");
-    }
-    /*  @Override
-    protected void configure(HttpSecurity http) throws Exception {
-
-      *//*  http
-                .csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/").permitAll()
-                .and()
-                .httpBasic()
+                .formLogin()
+                .loginPage("/auth/login")
+                .defaultSuccessUrl("/news/main")
                 .and()
                 .logout()
                 .logoutUrl("/logout")
                 .clearAuthentication(true)
                 .invalidateHttpSession(true)
-                //.deleteCookies("sessionone","remember-me")
-                .logoutSuccessUrl("/");*//*
+                .deleteCookies("JSESSIONID","remember-me")
+                .logoutSuccessUrl("/auth/login");
+    }
 
-    }*/
+
 
 
     @Bean
