@@ -1,3 +1,4 @@
+/*
 package com.mynews.config.security.auth;
 
 import com.mynews.model.User;
@@ -19,3 +20,4 @@ public class UserDeatilsServiceImpl implements UserDetailsService {
         return AuthUser.fromUser(user);
     }
 }
+*/

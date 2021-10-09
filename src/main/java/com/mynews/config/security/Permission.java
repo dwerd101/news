@@ -1,3 +1,4 @@
+/*
 package com.mynews.config.security;
 
 public enum Permission {
@@ -22,3 +23,4 @@ public enum Permission {
         return permission;
     }
 }
+*/

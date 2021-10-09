@@ -1,3 +1,4 @@
+/*
 package com.mynews.service.impl;
 
 import com.mynews.exception.UserNotFoundException;
@@ -44,3 +45,4 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow(()-> new UserNotFoundException("Пользователь с таким логином не найден"));
     }
 }
+*/

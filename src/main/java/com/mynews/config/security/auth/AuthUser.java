@@ -1,3 +1,4 @@
+/*
 package com.mynews.config.security.auth;
 
 import com.mynews.model.User;
@@ -67,3 +68,4 @@ public class AuthUser implements UserDetails {
         );
     }
 }
+*/

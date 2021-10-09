@@ -1,3 +1,4 @@
+/*
 package com.mynews.model;
 
 import com.mynews.config.security.Role;
@@ -34,3 +35,4 @@ public class User {
     @Enumerated(value = EnumType.STRING)
     private Role role;
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.mynews.config.security;
 
 import com.google.common.collect.Sets;
@@ -27,3 +28,4 @@ public enum Role {
                 .collect(Collectors.toSet());
     }
 }
+*/

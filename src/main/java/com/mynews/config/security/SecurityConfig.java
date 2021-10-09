@@ -1,3 +1,4 @@
+/*
 package com.mynews.config.security;
 
 import lombok.RequiredArgsConstructor;
@@ -63,8 +64,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     // in Memory DB User
-   /* @Override
+   */
+/* @Override
     protected UserDetailsService userDetailsService() {
 
-    }*/
+    }*//*
+
 }
+*/

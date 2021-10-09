@@ -1,3 +1,4 @@
+/*
 package com.mynews.repository;
 
 import com.mynews.model.User;
@@ -10,3 +11,4 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User,Long> {
     Optional<User> findByLogin(String login);
 }
+*/
